@@ -173,7 +173,7 @@ const Home = () => {
               </div>
 
               <Link
-                to="/merchant/checkout"
+                to="/merchant/shop"
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#8cff72] px-5 py-3 text-xs font-bold text-[#061008] transition hover:bg-[#a2ff91]"
               >
                 <ShoppingBag size={15} />

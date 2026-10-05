@@ -200,7 +200,7 @@ export default function ProductDetails() {
       return;
     }
 
-    navigate(`/merchant/checkout?product=${product.id}`);
+    navigate(`/checkout?product=${product.id}`);
   };
 
   return (

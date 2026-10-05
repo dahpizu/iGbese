@@ -16,6 +16,7 @@ import MerchantDashboard from "./pages/MerchantDashboard";
 import MerchantProfile from "./pages/MerchantProfile";
 import MerchantShop from "./pages/MerchantShop";
 import ProductDetails from "./pages/ProductDetails";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         {/* CUSTOMER AUTH */}
         <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         {/* CUSTOMER APP */}
         <Route element={<AppLayout />}>
@@ -30,13 +32,14 @@ function App() {
           <Route path="/purchases" element={<Purchases />} />
           <Route path="/payments" element={<Payments />} />
           <Route path="/profile" element={<Profile />} />
+
           <Route
             path="/merchant/product/:productId"
             element={<ProductDetails />}
           />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/kyc" element={<KYC />} />
           <Route path="/merchant/shop" element={<MerchantShop />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/merchant/profile" element={<MerchantProfile />} />
           <Route path="/purchase/:id" element={<PurchaseDetails />} />
@@ -44,7 +47,6 @@ function App() {
 
         {/* MERCHANT */}
         <Route path="/merchant/dashboard" element={<MerchantDashboard />} />
-
         <Route path="/merchant/checkout" element={<MerchantCheckout />} />
       </Routes>
     </BrowserRouter>
